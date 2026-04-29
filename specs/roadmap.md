@@ -1,0 +1,56 @@
+# Roadmap: AgentClinic
+
+Phases are intentionally small — each one is a shippable slice of work, independently reviewable and testable.
+
+## Phase 1 — Hello Hono
+- [x] Install and configure Hono with tsx dev server
+- [x] Single / route returning "AgentClinic is open for business"
+- [x] Confirm TypeScript types work end-to-end
+
+## Phase 2 — Base Layout
+- [x] Server-side JSX layout component (header, nav, main, footer)
+- [x] Basic CSS (custom properties, reset, typography)
+- [x] All routes render inside the shared layout
+
+## Phase 3 — Agent List
+- [x] SQLite database + first migration (agents table)
+- [x] Seed a handful of fictional agents
+- [x] /agents page listing all agents
+
+## Phase 4 — Agent Detail & Management
+- [x] /agents/:id page showing a single agent's profile
+- [x] Name, model type, current status, presenting complaints
+- [ ] Staff can add new agents (Agent CRUD)
+- [ ] Staff can modify existing agent details
+- [ ] Staff can delete agents from the registry
+
+## Phase 5 — Ailments Catalog
+- [x] ailments table + seed data (e.g., "context-window claustrophobia", "prompt fatigue")
+- [x] /ailments list page
+- [x] Link agents to one or more ailments
+
+## Phase 6 — Therapies Catalog
+- [x] therapies table + seed data
+- [x] /therapies list page
+- [x] Map ailments → recommended therapies
+- [x] Staff can add new therapies (Therapy Addition)
+
+## Phase 7 — Appointment Booking
+- [x] appointments table (agent, therapist, datetime, status)
+- [x] Form to book an appointment from an agent's detail page
+- [x] Basic validation and confirmation page
+
+## Phase 8 — Staff Dashboard
+- [x] /dashboard with summary counts: agents, open appointments, ailments in-flight
+- [x] Simple table views for staff to manage records
+- [x] Mary's dashboard is now real
+
+## Phase 9 — Polish & Accessibility
+- [x] Responsive layout for Steve's modern-browser requirement
+- [x] Semantic HTML audit
+- [x] Keyboard navigation and focus styles
+
+## Phase 10 — Hardening
+- [x] Error pages (404, 500)
+- [x] Input sanitization on all forms
+- [x] Basic logging middleware
